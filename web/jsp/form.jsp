@@ -8,16 +8,17 @@
     </head>
     <body>
         <form method="post">
-            <input type="text" 
-                   name="name"
+            <input type="text"
+                   id="field1"
+                   name="firstName"
                    placeholder="Type your name"
                    size="50"
-                   value="${param.name}"/>
+                   value="${param.firstName}"/>
             <button type="submit">Post</button>
         </form>
 
-        <c:if test="${not empty param.name}">
-            <h3>Hi ${param.name}</h3>
+        <c:if test="${not empty param.firstName}">
+            <h3>Hi ${param.firstName}!</h3>
         </c:if>
     </body>
 </html>

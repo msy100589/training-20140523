@@ -17,7 +17,13 @@ public class HomeServlet extends HttpServlet
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
     {
         resp.setContentType("text/html");
-        resp.getWriter().write("<h1>Welcome to Basic Servlet Training - May 23, 2014</h1>");
+
+        if (req.getServletPath().endsWith("/home")) {
+            resp.getWriter().write("<h1>Welcome to Basic Servlet Training - May 23, 2014</h1>");
+        }
+        else {
+            resp.getWriter().write("Marlon gwapo!");
+        }
     }
 
 }
